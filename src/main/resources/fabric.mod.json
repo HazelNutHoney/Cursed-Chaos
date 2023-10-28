@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "cursed-chaos",
+	"version": "${version}",
+	"name": "Cursed Chaos",
+	"description": "Be carful what you wish for... Before it is destroyed W̶̲͙͎̖̟̗̺͍̺̞̝̲̼̝͆̅̅̆̿̃̋͗͂̎̐̔̚͝á̸̢̢̗͎̜̩̬̱̙̹̳̇́̚͝ţ̵̧̘̗͖͕͕̔̂͘c̵̨̡̣̬̮̝̹̗̣̗̫̳̱̈̆̀̀̀͆͌̒h̷̡̟̤͓̣̩̫̯̱̮̬͈̮͋̈̏ ̴̡̘̹͑̀͊͒́́̄͆̌̆̇̔͘ơ̶̢̤̹̣͈̗̖͒͊̎̀͒͑̄̏͠͠ứ̸̰͓̭͓̬̤͖́̀̓̂̆̌̚̚t̶̖͛̌̊͑̂̋̀̀̕̚̕͝͝͠",
+	"authors": [
+		"HazelNutHoney"
+	],
+	"contact": {
+		"homepage": "https://github.com/HazelNutHoney/cursed-chaos#readme",
+		"sources": "https://github.com/HazelNutHoney/cursed-chaos"
+	},
+	"license": "MIT",
+	"icon": "assets/cursed-chaos/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hazel.cursedchaos.CursedCHAOS"
+		],
+		"client": [
+			"net.hazel.cursedchaos.CursedCHAOSClient"
+		],
+		"fabric-datagen": [
+			"net.hazel.cursedchaos.CursedCHAOSDataGenerator"
+		]
+	},
+	"mixins": [
+		"cursed-chaos.mixins.json",
+		{
+			"config": "cursed-chaos.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
